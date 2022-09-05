@@ -1,4 +1,4 @@
-public class Slytherin extends hogwarts{
+public class Slytherin extends Hogwarts {
 
     private int cunning;
     private int determination;
@@ -15,7 +15,7 @@ public class Slytherin extends hogwarts{
         this.lust_for_power = lust_for_power;
     }
 
-    public int getLust_for_power() {
+    public int getLustForPower() {
         return lust_for_power;
     }
 
@@ -64,5 +64,22 @@ public class Slytherin extends hogwarts{
                 ", resourcefulness=" + resourcefulness +
                 ", lust_for_power=" + lust_for_power +
                 "\n ";
+    }
+
+    public void performanceComparisonFromSlytherin(Hogwarts hogwarts1, Hogwarts hogwarts2){
+        System.out.println("          cunning");
+        System.out.println("      " + ((Slytherin) hogwarts1).getCunning() + "           " + ((Slytherin) hogwarts2).getCunning());
+        System.out.println("       determination");
+        System.out.println("      " + ((Slytherin) hogwarts1).getDetermination() + "           " + ((Slytherin) hogwarts2).getDetermination());
+        System.out.println("          ambition");
+        System.out.println("      " + ((Slytherin) hogwarts1).getAmbition() + "           " + ((Slytherin) hogwarts2).getAmbition());
+        System.out.println("      resourcefulness");
+        System.out.println("      " + ((Slytherin) hogwarts1).getResourcefulness() + "           " + ((Slytherin) hogwarts2).getResourcefulness());
+        System.out.println("       lust for power");
+        System.out.println("      " + ((Slytherin) hogwarts1).getLustForPower() + "           " + ((Slytherin) hogwarts2).getLustForPower());
+        int sum1 = ((Slytherin) hogwarts1).cunning + ((Slytherin) hogwarts1).determination + ((Slytherin) hogwarts1).ambition + ((Slytherin) hogwarts1).resourcefulness + ((Slytherin) hogwarts1).lust_for_power;
+        int sum2 = ((Slytherin) hogwarts2).cunning + ((Slytherin) hogwarts2).determination + ((Slytherin) hogwarts2).ambition + ((Slytherin) hogwarts2).resourcefulness + ((Slytherin) hogwarts2).lust_for_power;
+        System.out.println("            sum");
+        System.out.println("      " + sum1 + "          " + sum2);
     }
 }

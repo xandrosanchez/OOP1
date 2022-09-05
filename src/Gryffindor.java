@@ -1,4 +1,4 @@
-public class Gryffindor extends hogwarts{
+public class Gryffindor extends Hogwarts {
 
     private int nobility;
     private int honour;
@@ -43,5 +43,18 @@ public class Gryffindor extends hogwarts{
                 ", honour=" + honour +
                 ", bravery=" + bravery +
                 "\n";
+    }
+
+    public void performanceComparisonFromGryffindor(Hogwarts hogwarts1, Hogwarts hogwarts2){
+        System.out.println("          nobility");
+        System.out.println("      " + ((Gryffindor) hogwarts1).getNobility() + "           " + ((Gryffindor) hogwarts2).getNobility());
+        System.out.println("           honour");
+        System.out.println("      " + ((Gryffindor) hogwarts1).getHonour() + "           " + ((Gryffindor) hogwarts2).getHonour());
+        System.out.println("           bravery");
+        System.out.println("      " + ((Gryffindor) hogwarts1).getBravery() + "           " + ((Gryffindor) hogwarts2).getBravery());
+        int sum1 = ((Gryffindor) hogwarts1).nobility + ((Gryffindor) hogwarts1).honour + ((Gryffindor) hogwarts1).bravery;
+        int sum2 = ((Gryffindor) hogwarts2).nobility + ((Gryffindor) hogwarts2).honour + ((Gryffindor) hogwarts2).bravery;
+        System.out.println("            sum");
+        System.out.println("      " + sum1 + "          " + sum2);
     }
 }
