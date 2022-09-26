@@ -45,16 +45,23 @@ public class Hufflepuff extends Hogwarts {
                 "\n ";
     }
 
-    public void performanceComparisonFromHufflepuff(Hogwarts hogwarts1, Hogwarts hogwarts2){
-        System.out.println("          industriousness");
-        System.out.println("      " + ((Hufflepuff) hogwarts1).getIndustriousness() + "           " + ((Hufflepuff) hogwarts2).getIndustriousness());
-        System.out.println("           loyalty");
-        System.out.println("      " + ((Hufflepuff) hogwarts1).getLoyalty() + "           " + ((Hufflepuff) hogwarts2).getLoyalty());
-        System.out.println("           honesty");
-        System.out.println("      " + ((Hufflepuff) hogwarts1).getHonesty() + "           " + ((Hufflepuff) hogwarts2).getHonesty());
-        int sum1 = ((Hufflepuff) hogwarts1).industriousness + ((Hufflepuff) hogwarts1).loyalty + ((Hufflepuff) hogwarts1).honesty;
-        int sum2 = ((Hufflepuff) hogwarts2).industriousness + ((Hufflepuff) hogwarts2).loyalty + ((Hufflepuff) hogwarts2).honesty;
-        System.out.println("            sum");
-        System.out.println("      " + sum1 + "           " + sum2);
+    public void performanceComparisonFromHufflepuff(Hufflepuff hufflepuff1,Hufflepuff hufflepuff2){
+        if (hufflepuff1.honesty > hufflepuff2.honesty) {
+            System.out.println(hufflepuff1.getName() + " more honesty than " + hufflepuff2.getName());
+        } else{
+            System.out.println(hufflepuff2.getName() + " more honesty than " + hufflepuff1.getName());
+        }
+        if (hufflepuff1.loyalty > hufflepuff2.loyalty) {
+            System.out.println(hufflepuff1.getName() + " more loyalty than " + hufflepuff2.getName());
+        } else{
+            System.out.println(hufflepuff2.getName() + " more loyalty than " + hufflepuff1.getName());
+        }
+        if (hufflepuff1.industriousness > hufflepuff2.industriousness) {
+            System.out.println(hufflepuff1.getName() + " more industriousness than " + hufflepuff2.getName());
+        } else{
+            System.out.println(hufflepuff2.getName() + " more industriousness than " + hufflepuff1.getName());
+        }
+        System.out.println();
     }
+
 }

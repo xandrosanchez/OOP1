@@ -66,20 +66,34 @@ public class Slytherin extends Hogwarts {
                 "\n ";
     }
 
-    public void performanceComparisonFromSlytherin(Hogwarts hogwarts1, Hogwarts hogwarts2){
-        System.out.println("          cunning");
-        System.out.println("      " + ((Slytherin) hogwarts1).getCunning() + "           " + ((Slytherin) hogwarts2).getCunning());
-        System.out.println("       determination");
-        System.out.println("      " + ((Slytherin) hogwarts1).getDetermination() + "           " + ((Slytherin) hogwarts2).getDetermination());
-        System.out.println("          ambition");
-        System.out.println("      " + ((Slytherin) hogwarts1).getAmbition() + "           " + ((Slytherin) hogwarts2).getAmbition());
-        System.out.println("      resourcefulness");
-        System.out.println("      " + ((Slytherin) hogwarts1).getResourcefulness() + "           " + ((Slytherin) hogwarts2).getResourcefulness());
-        System.out.println("       lust for power");
-        System.out.println("      " + ((Slytherin) hogwarts1).getLustForPower() + "           " + ((Slytherin) hogwarts2).getLustForPower());
-        int sum1 = ((Slytherin) hogwarts1).cunning + ((Slytherin) hogwarts1).determination + ((Slytherin) hogwarts1).ambition + ((Slytherin) hogwarts1).resourcefulness + ((Slytherin) hogwarts1).lust_for_power;
-        int sum2 = ((Slytherin) hogwarts2).cunning + ((Slytherin) hogwarts2).determination + ((Slytherin) hogwarts2).ambition + ((Slytherin) hogwarts2).resourcefulness + ((Slytherin) hogwarts2).lust_for_power;
-        System.out.println("            sum");
-        System.out.println("      " + sum1 + "          " + sum2);
+    public void performanceComparisonFromSlytherin(Slytherin slytherin1,Slytherin slytherin2){
+        if (slytherin1.lust_for_power > slytherin2.lust_for_power) {
+            System.out.println(slytherin1.getName() + " more power than " + slytherin2.getName());
+        } else{
+            System.out.println(slytherin2.getName() + " more power than " + slytherin1.getName());
+        }
+        if (slytherin1.resourcefulness > slytherin2.resourcefulness) {
+            System.out.println(slytherin1.getName() + " more resourcefulness than " + slytherin2.getName());
+        } else{
+            System.out.println(slytherin2.getName() + " more resourcefulness than " + slytherin1.getName());
+        }
+        if (slytherin1.ambition > slytherin2.ambition) {
+            System.out.println(slytherin1.getName() + " more ambition than " + slytherin2.getName());
+        } else{
+            System.out.println(slytherin2.getName() + " more ambition than " + slytherin1.getName());
+        }
+        if (slytherin1.determination > slytherin2.determination) {
+            System.out.println(slytherin1.getName() + " more determination than " + slytherin2.getName());
+        } else{
+            System.out.println(slytherin2.getName() + " more determination than " + slytherin1.getName());
+        }
+        if (slytherin1.cunning > slytherin2.cunning) {
+            System.out.println(slytherin1.getName() + " more cunning than " + slytherin2.getName());
+        } else{
+            System.out.println(slytherin2.getName() + " more cunning than " + slytherin1.getName());
+        }
+        System.out.println();
     }
+
+
 }

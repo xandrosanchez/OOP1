@@ -17,24 +17,26 @@ public class Main {
         System.out.println(gryffindor1);
         System.out.println(slytherin2);
         System.out.println(hufflepuff3);
-        performanceComparison(slytherin1,slytherin3);
-        performanceComparison(gryffindor1,ravenclaw2);
+        performanceComparison(slytherin1,gryffindor3);
+        performanceComparison(gryffindor1,gryffindor3);
     }
 
     public static void performanceComparison(Hogwarts hogwarts1, Hogwarts hogwarts2){
-        System.out.println("\n" +
-                "    student comparison...");
-        System.out.println(hogwarts1.getName() + " and " + hogwarts2.getName());
         if (hogwarts1.getClass() != hogwarts2.getClass()){
-            hogwarts1.performanceComparisonFromHogwarts(hogwarts1,hogwarts2);
-        } else if (hogwarts1.getClass() == Ravenclaw.class) {
-            ((Ravenclaw) hogwarts1).performanceComparisonFromRavenclaw(hogwarts1,hogwarts2);
-        } else if (hogwarts1.getClass() == Slytherin.class) {
-            ((Slytherin) hogwarts1).performanceComparisonFromSlytherin(hogwarts1,hogwarts2);
-        } else if (hogwarts1.getClass() == Gryffindor.class) {
-            ((Gryffindor) hogwarts1).performanceComparisonFromGryffindor(hogwarts1,hogwarts2);
-        } else if (hogwarts1.getClass() == Hufflepuff.class) {
-            ((Hufflepuff) hogwarts1).performanceComparisonFromHufflepuff(hogwarts1,hogwarts2);
+            hogwarts1.performanceComparison(hogwarts1,hogwarts2);
+        }
+        if (hogwarts1.getClass() == Gryffindor.class){
+            ((Gryffindor) hogwarts1).performanceComparisonFromGryffindor(((Gryffindor) hogwarts1),((Gryffindor) hogwarts2));
+        }
+        if (hogwarts1.getClass() == Slytherin.class){
+            ((Slytherin) hogwarts1).performanceComparisonFromSlytherin(((Slytherin) hogwarts1),((Slytherin) hogwarts2));
+        }
+        if (hogwarts1.getClass() == Ravenclaw.class){
+            ((Ravenclaw) hogwarts1).performanceComparisonFromRaveclaw(((Ravenclaw) hogwarts1),((Ravenclaw) hogwarts2));
+        }
+        if (hogwarts1.getClass() == Hufflepuff.class){
+            ((Hufflepuff) hogwarts1).performanceComparisonFromHufflepuff(((Hufflepuff) hogwarts1),((Hufflepuff) hogwarts2));
         }
     }
+
 }

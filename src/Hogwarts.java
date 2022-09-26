@@ -41,14 +41,17 @@ public class Hogwarts {
                 ", transgression_distance=" + transgressionDistance + ", ";
     }
 
-    public void performanceComparisonFromHogwarts(Hogwarts hogwarts1, Hogwarts hogwarts2){
-        System.out.println("           magic");
-        System.out.println("      " + hogwarts1.getMagic() + "            " + hogwarts2.getMagic());
-        System.out.println("    transgression distance");
-        System.out.println("      " + hogwarts1.getTransgressionDistance() + "            " + hogwarts2.getTransgressionDistance());
-        int sum1 = hogwarts1.getMagic() + hogwarts1.getTransgressionDistance();
-        int sum2 = hogwarts2.getMagic() + hogwarts2.getTransgressionDistance();
-        System.out.println("            sum");
-        System.out.println("      " + sum1 + "           " + sum2);
+    public void performanceComparison(Hogwarts hogwarts1, Hogwarts hogwarts2) {
+        if (hogwarts1.magic > hogwarts2.magic) {
+            System.out.println(hogwarts1.name + " has more powerful magic than " + hogwarts2.name);
+        } else {
+            System.out.println(hogwarts2.name + " has more powerful magic than " + hogwarts1.name);
+        }
+        if (hogwarts1.transgressionDistance > hogwarts2.transgressionDistance){
+            System.out.println(hogwarts1.name + " has a long range than" + hogwarts2.name);
+        } else {
+            System.out.println(hogwarts2.name + " has a long range than " + hogwarts1.name);
+        }
+        System.out.println();
     }
 }

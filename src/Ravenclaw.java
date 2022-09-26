@@ -44,16 +44,23 @@ public class Ravenclaw extends Hogwarts {
                 "\n";
     }
 
-    public void performanceComparisonFromRavenclaw(Hogwarts hogwarts1, Hogwarts hogwarts2){
-        System.out.println("           mind");
-        System.out.println("      " + ((Ravenclaw) hogwarts1).getMind() + "           " + ((Ravenclaw) hogwarts2).getMind());
-        System.out.println("          widsom");
-        System.out.println("      " + ((Ravenclaw) hogwarts1).getWisdom() + "           " + ((Ravenclaw) hogwarts2).getWisdom());
-        System.out.println("         creation");
-        System.out.println("      " + ((Ravenclaw) hogwarts1).getCreation() + "           " + ((Ravenclaw) hogwarts2).getCreation());
-        int sum1 = ((Ravenclaw) hogwarts1).getMind() + ((Ravenclaw) hogwarts1).wisdom + ((Ravenclaw) hogwarts1).creation;
-        int sum2 = ((Ravenclaw) hogwarts2).getMind() + ((Ravenclaw) hogwarts2).wisdom + ((Ravenclaw) hogwarts2).creation;
-        System.out.println("            sum");
-        System.out.println("      " + sum1 + "           " + sum2);
+    public void performanceComparisonFromRaveclaw(Ravenclaw ravenclaw1,Ravenclaw ravenclaw2){
+        if (ravenclaw1.mind > ravenclaw2.mind) {
+            System.out.println(ravenclaw1.getName() + " more mind than " + ravenclaw2.getName());
+        } else{
+            System.out.println(ravenclaw2.getName() + " more mind than " + ravenclaw1.getName());
+        }
+        if (ravenclaw1.wisdom > ravenclaw2.wisdom) {
+            System.out.println(ravenclaw1.getName() + " more wisdom than " + ravenclaw2.getName());
+        } else{
+            System.out.println(ravenclaw2.getName() + " more wisdom than " + ravenclaw1.getName());
+        }
+        if (ravenclaw1.creation > ravenclaw2.creation) {
+            System.out.println(ravenclaw1.getName() + " more creation than " + ravenclaw2.getName());
+        } else{
+            System.out.println(ravenclaw2.getName() + " more creation than " + ravenclaw1.getName());
+        }
+        System.out.println();
     }
+
 }

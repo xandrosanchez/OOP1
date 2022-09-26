@@ -45,16 +45,24 @@ public class Gryffindor extends Hogwarts {
                 "\n";
     }
 
-    public void performanceComparisonFromGryffindor(Hogwarts hogwarts1, Hogwarts hogwarts2){
-        System.out.println("          nobility");
-        System.out.println("      " + ((Gryffindor) hogwarts1).getNobility() + "           " + ((Gryffindor) hogwarts2).getNobility());
-        System.out.println("           honour");
-        System.out.println("      " + ((Gryffindor) hogwarts1).getHonour() + "           " + ((Gryffindor) hogwarts2).getHonour());
-        System.out.println("           bravery");
-        System.out.println("      " + ((Gryffindor) hogwarts1).getBravery() + "           " + ((Gryffindor) hogwarts2).getBravery());
-        int sum1 = ((Gryffindor) hogwarts1).nobility + ((Gryffindor) hogwarts1).honour + ((Gryffindor) hogwarts1).bravery;
-        int sum2 = ((Gryffindor) hogwarts2).nobility + ((Gryffindor) hogwarts2).honour + ((Gryffindor) hogwarts2).bravery;
-        System.out.println("            sum");
-        System.out.println("      " + sum1 + "          " + sum2);
+    public void performanceComparisonFromGryffindor(Gryffindor gryffindor1, Gryffindor gryffindor2) {
+        if (gryffindor1.honour > gryffindor2.honour) {
+            System.out.println(gryffindor1.getName() + " more honour than " + gryffindor2.getName());
+        } else{
+            System.out.println(gryffindor2.getName() + " more honour than " + gryffindor1.getName());
+        }
+        if (gryffindor1.nobility > gryffindor2.nobility) {
+            System.out.println(gryffindor1.getName() + " more nobility than " + gryffindor2.getName());
+        } else{
+            System.out.println(gryffindor2.getName() + " more nobility than " + gryffindor1.getName());
+        }
+        if (gryffindor1.bravery > gryffindor2.bravery) {
+            System.out.println(gryffindor1.getName() + " more bravery than " + gryffindor2.getName());
+        } else{
+            System.out.println(gryffindor2.getName() + " more bravery than " + gryffindor1.getName());
+        }
+        System.out.println();
     }
+
+
 }
